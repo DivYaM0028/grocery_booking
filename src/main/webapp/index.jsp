@@ -14,6 +14,9 @@
     <div>
         <h3>Add New Grocery Item</h3>
         <form id="addItemForm" action="handleForm" method="post">
+            <label for="itemId">ID:</label>
+            <input type="text" id="itemId" name="itemId" required><br>
+
             <label for="itemName">Item Name:</label>
             <input type="text" id="itemName" name="itemName" required><br>
             
