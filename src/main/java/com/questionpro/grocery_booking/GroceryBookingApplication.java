@@ -7,7 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
-import com.questionpro.grocery_booking.contoller.service.GroceryItemService;
+import com.questionpro.grocery_booking.service.GroceryItemService;
 import com.questionpro.grocery_booking.model.GroceryItem;
 
 @SpringBootApplication
@@ -22,10 +22,10 @@ public class GroceryBookingApplication {
 		item.setPrice(125);
 		item.setQuantity(20);
 
-		GroceryItemService service = ((BeanFactory) context).getBean(GroceryItemService.class);
+		GroceryItemService service =  context.getBean(GroceryItemService.class);
 		service.addGroceryItem(item);
 
-		List<GroceryItem> items = service.getItems();
+		List<GroceryItem> items = service.getAllGroceryItems();
 		System.out.println(items);
 	}	
 

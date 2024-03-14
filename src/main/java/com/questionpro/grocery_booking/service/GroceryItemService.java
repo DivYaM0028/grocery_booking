@@ -1,4 +1,4 @@
-package com.questionpro.grocery_booking.contoller.service;
+package com.questionpro.grocery_booking.service;
 
 import java.util.List;
 
@@ -25,14 +25,14 @@ public class GroceryItemService {
 
     public GroceryItem addGroceryItem(GroceryItem groceryItem) {
         repo.save(groceryItem);
-        return null;
+        System.out.println("Item Saved!!");
+        return groceryItem;
     }
 
 
-    public List<GroceryItem> getItems() {
+    public List<GroceryItem> getAllGroceryItems() {
         return repo.findAll();
     }
-
 
 
 }
